@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Dr.Cell - Sistema de Ordem de Serviço</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Dr.Cell</h1>
+<p>Sistema de Ordem de Serviço</p>
+</header>
+
+<div class="container">
+
+<div class="topbar">
+<button onclick="novaOS()">➕ Nova Ordem</button>
+
+<input type="text" id="busca" placeholder="Buscar cliente ou aparelho..." onkeyup="buscarOS()">
+</div>
+
+<h2>Ordens de Serviço</h2>
+
+<table>
+<thead>
+<tr>
+<th>Nº</th>
+<th>Cliente</th>
+<th>Aparelho</th>
+<th>Status</th>
+<th>Ações</th>
+</tr>
+</thead>
+
+<tbody id="listaOS"></tbody>
+
+</table>
+
+</div>
+
+<!-- MODAL -->
+
+<div id="modal" class="modal">
+
+<div class="modal-content">
+
+<h2>Ordem de Serviço</h2>
+
+<label>Cliente</label>
+<input id="cliente">
+
+<label>Telefone</label>
+<input id="telefone">
+
+<label>Aparelho</label>
+<input id="aparelho">
+
+<label>IMEI</label>
+<input id="imei">
+
+<label>Problema Relatado</label>
+<textarea id="problema"></textarea>
+
+<label>Serviço Realizado</label>
+<textarea id="servico"></textarea>
+
+<label>Status</label>
+<select id="status">
+<option>Em análise</option>
+<option>Em reparo</option>
+<option>Pronto</option>
+</select>
+
+<h3>Checklist de Testes</h3>
+
+<div class="checklist">
+
+<label><input type="checkbox" id="tela"> Tela</label>
+<label><input type="checkbox" id="touch"> Touch</label>
+<label><input type="checkbox" id="wifi"> Wi-Fi</label>
+<label><input type="checkbox" id="bluetooth"> Bluetooth</label>
+<label><input type="checkbox" id="camera"> Câmera</label>
+<label><input type="checkbox" id="microfone"> Microfone</label>
+<label><input type="checkbox" id="altofalante"> Alto-falante</label>
+<label><input type="checkbox" id="sensor"> Sensor</label>
+<label><input type="checkbox" id="botoes"> Botões</label>
+<label><input type="checkbox" id="carregamento"> Carregamento</label>
+<label><input type="checkbox" id="bateria"> Bateria</label>
+
+</div>
+
+<div class="botoes">
+
+<button onclick="salvarOS()">💾 Salvar</button>
+<button onclick="fechar()">❌ Fechar</button>
+<button onclick="window.print()">🖨️ Imprimir</button>
+
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
